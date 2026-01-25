@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
-import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
+import { Omega } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -9,9 +9,9 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:items-center lg:py-16">
           <div>
             <div className="flex items-center text-primary-dark">
-              <Logomark className="h-10 w-10 flex-none fill-primary-dark" />
+              <Omega className="h-10 w-10 flex-none text-primary-dark" />
               <div className="ml-4">
-                <p className="text-base font-semibold">WorkoutTrack</p>
+                <p className="text-base font-semibold">OmegaFyt</p>
               </div>
             </div>
             <nav className="mt-11 flex gap-8">

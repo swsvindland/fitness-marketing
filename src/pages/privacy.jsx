@@ -7,10 +7,10 @@ export default function Privacy() {
   return (
     <>
       <Head>
-        <title>WorkoutTrack - Privacy Policy</title>
+        <title>OmegaFyt - Privacy Policy | Your Data is Safe & Secure</title>
         <meta
           name="description"
-          content="Are you looking to get in shape, lose weight, and improve your overall health and well-being? Look no further than WorkoutTrack, the ultimate workout and calorie tracking app"
+          content="OmegaFyt's privacy policy: We never sell your fitness data. Learn how we protect your personal information, workout data, and progress photos with enterprise-grade security."
         />
       </Head>
       <Header />

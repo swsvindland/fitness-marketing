@@ -1,37 +1,39 @@
 {
-  "name": "workout-track-marketing",
+  "name": "omega-fyt-marketing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "clean": "git clean -xdf .cache .next .turbo node_modules",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json}"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.0",
-    "@heroicons/react": "^2.1.5",
-    "@tailwindcss/forms": "^0.5.9",
-    "@vercel/analytics": "^1.4.0",
-    "autoprefixer": "^10.4.20",
-    "axios": "^1.7.7",
+    "@headlessui/react": "^2.2.9",
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/forms": "^0.5.11",
+    "@vercel/analytics": "^1.6.1",
+    "autoprefixer": "^10.4.23",
+    "axios": "^1.13.2",
     "clsx": "^2.1.1",
     "focus-visible": "^5.2.1",
-    "framer-motion": "^11.11.17",
-    "next": "15.0.3",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.1",
     "postcss-focus-visible": "^10.0.1",
-    "react": "19.0.0-rc.1",
-    "react-dom": "19.0.0-rc.1",
-    "tailwindcss": "^3.4.15",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "tailwindcss": "^3.4.19",
     "use-debounce": "^9.0.4"
   },
   "devDependencies": {
-    "babel-plugin-react-compiler": "19.0.0-beta-0dec889-20241115",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
-    "eslint-plugin-react-compiler": "19.0.0-beta-0dec889-20241115",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.5.14"
+    "babel-plugin-react-compiler": "19.1.0-rc.3",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.1.1",
+    "eslint-plugin-react-compiler": "19.1.0-rc.2",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }

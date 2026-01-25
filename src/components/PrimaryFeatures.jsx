@@ -17,27 +17,27 @@ const MotionAppScreenBody = motion(AppScreen.Body);
 
 const features = [
   {
-    name: 'Workouts',
+    name: 'Smart AI Workouts',
     description:
-      'Create your own, or use a pre-built workout plan to get started. We’ll track your progress and help you reach your goals. You will get recommended weights based off past performance to make sure you are always working out hard, and progressing.',
+      'Never plateau again! Our AI analyzes your performance and automatically adjusts weights, sets, and exercises. Get personalized routines that evolve with your progress - no guesswork required. Just show up, follow the plan, and watch yourself get stronger every week.',
     screen: WorkoutMotionScreen,
   },
   {
-    name: 'Calories and Macros',
+    name: 'Effortless Meal Tracking',
     description:
-      'Get recommended calories and macros, and a fast easy way to log all of your food. You can search by name, or scan the food barcode (for free) to quickly find your food. Our database has over 1.5 million verified foods.',
+      'Stop counting calories the hard way! Scan any barcode to instantly log your meals. With 1.5 million verified foods in our database, hitting your nutrition targets has never been easier. Stay on track without the tedious manual entry.',
     screen: EatMotionScreen,
   },
   {
-    name: 'Supplements',
+    name: 'Smart Supplement Timing',
     description:
-      'Tell us what supplements you are taking, and when you are taking them. We’ll remind you when it’s time to take your next dose.',
+      'Maximize your supplement benefits with perfect timing. Never miss a dose again with intelligent reminders based on your workout schedule and goals. Get the most from every supplement dollar you spend.',
     screen: SupplementMotionScreen,
   },
   {
-    name: 'Body',
+    name: 'Visual Progress Tracking',
     description:
-      'Record your weight, blood pressure, and body measurements. We’ll track your progress and help you reach your goals. Get body fat estimates based off the US Navy method, so you can see how your body is changing even if your weight is not. Also Premium users can upload progress photos to see how they are improving.',
+      'See your transformation unfold! Track weight, measurements, and body fat percentage using proven calculation methods. Upload progress photos to capture changes that numbers alone can\'t show - because your journey is about more than just the scale.',
     screen: BodyMotionScreen,
   },
 ];
@@ -302,11 +302,11 @@ export function PrimaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-white text-3xl font-medium tracking-tight text-secondary">
-            Every feature you need to win. Try it for yourself.
+            Everything You Need to Reach Your Fitness Goals
           </h2>
           <p className="mt-2 text-lg text-ternary">
             {
-              "WorkoutTrack was built to be the best, all inclusive fitness app. You can track your workouts, log your meals, make sure you're taking your supplements, and record how your body changes over time."
+              "Stop juggling multiple apps that don't work together. OmegaFyt connects your workouts, nutrition, supplements, and progress tracking into one seamless system. Everything syncs perfectly so you can focus on what matters - showing up and putting in the work."
             }
           </p>
         </div>

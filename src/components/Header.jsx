@@ -59,7 +59,7 @@ export function Header() {
               </div>
               <div>
                 <Link
-                  href="https://app.workout-track.com"
+                  href="https://app.omegafyt.com"
                   className="btn-primary"
                 >
                   Sign In
@@ -113,7 +113,7 @@ export function Header() {
                             <MobileNavLink href="#pricing">
                               Pricing
                             </MobileNavLink>
-                            <MobileNavLink href="https://app.workout-track.com">
+                            <MobileNavLink href="https://app.omegafyt.com">
                               Sign In
                             </MobileNavLink>
                           </div>

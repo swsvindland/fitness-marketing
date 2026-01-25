@@ -7,10 +7,10 @@ export default function Terms() {
   return (
       <>
         <Head>
-          <title>WorkoutTrack - Terms and Conditions</title>
+          <title>OmegaFyt - Terms and Conditions | User Agreement</title>
           <meta
               name="description"
-              content="Are you looking to get in shape, lose weight, and improve your overall health and well-being? Look no further than WorkoutTrack, the ultimate workout and calorie tracking app"
+              content="OmegaFyt's terms and conditions: Clear, fair user agreement for our fitness app. Learn about your rights, our commitments, and how we work together to help you achieve your fitness goals."
           />
         </Head>
         <Header />

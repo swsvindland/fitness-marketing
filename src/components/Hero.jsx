@@ -24,16 +24,14 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-background">
-              Get Into the Best Shape of Your Life
+              Achieve Your Dream Body With Smart, Personalized Training
             </h1>
             <p className="mt-6 text-lg text-card">
-              WorkoutTrack is the ultimate workout and calorie tracking app. It
-              will track your workouts, recommend new weights and exercises to
-              keep you progressing in the gym. It will give you calorie and
-              macro nutrient targets to help you get in the best shape of your
-              life. Already a pro and just want a single place to track your
-              progress? Build your own custom workouts and set custom macro
-              targets and let us do the rest.
+              Stop wasting time with confusing fitness apps that don't deliver results.
+              OmegaFyt's AI-powered system creates personalized workouts that adapt to YOUR
+              progress, while effortless meal tracking keeps you on target. Whether you want
+              to lose weight, build muscle, or just feel healthier - get a system that evolves
+              with you and makes consistency easy.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <AppStoreLink />

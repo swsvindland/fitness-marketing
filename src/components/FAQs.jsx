@@ -5,55 +5,55 @@ const faqs = [
   {
     question: 'I want a new feature!',
     answer:
-      'Awesome, email me at sam@workout-track.com and let me know what you want. I am always looking for new ideas and features to add.',
+      'Love hearing from our community! Email me at sam@omegafyt.com and let me know what you want. I personally read every message and prioritize features our users request most.',
     links: [],
   },
   {
     question: 'How many people are working on this project?',
     answer:
-      'Right now just one. I am a full time software engineer, and I am working on this project in my free time, but I am typically releasing new features every week.',
+      'Currently just me - a full-time software engineer passionate about helping people transform their bodies. I work on OmegaFyt in my free time and release new features weekly. Being a small team means I can move fast and build features that actually matter to users!',
     links: [],
   },
   {
     question: 'Is this project open source?',
     answer:
-      'Not right now. While this is in active development and gaining users, and hopefully on its way to profitability, I am not open sourcing it. If this project becomes unmaintained, or I decide to stop working on it, I will open source it.',
+      'Not currently. While this is in active development and growing, I\'m focused on building the best fitness experience possible. If circumstances change or the project becomes unmaintained, I\'ll open source it to benefit the community.',
     links: [],
   },
   {
     question: 'How do I change my password?',
     answer:
-      'You can change your password by clicking the User Icon in the top right, and then clicking settings. From there you can change your password. You can also logout, and click the forgot password button and a reset email will be sent to you.',
+      'Easy! Click the User Icon in the top right → Settings → Change Password. Forgot your password? No problem - just click "Forgot Password" on the login screen and we\'ll send you a reset link instantly.',
     links: [],
   },
   {
     question: 'Do you sell my data?',
     answer:
-      'No! We do not sell your data. We do have Google ads, and if you opt in, they will track you between apps, but we do not sell your personal, or fitness data to anyone.',
+      'Never! Your fitness data is sacred to us. We use minimal, anonymous analytics to improve the app, but your personal workout data, progress photos, and measurements stay 100% private and are never sold to anyone.',
     links: [],
   },
   {
     question: 'Why does it take so long to login?',
     answer:
-      'This is to keep costs down while we are growing. We are not VC backed, and we are not selling your data. So our revenue is limited to subscriptions, and ads. Once we have a large enough user base, we can move to better servers that will not have the slow startup speed.',
+      'We\'re bootstrapped and growing sustainably without selling your data! This helps us keep costs low and focus on features you want. As the user base grows, we\'re continuously upgrading our infrastructure for better performance.',
     links: [],
   },
   {
     question: 'Why a subscription and not a flat price?',
     answer:
-      'The main reason for this is the ongoing cost of servers and databases. We use a 3rd party for the food db and they charge monthly, as such we basically have to as well. Not to mention file storage for uploaded progress photos.',
+      'Great question! Unlike one-time purchase apps, OmegaFyt provides ongoing value through constantly updated food databases (1.5M+ foods), cloud storage for your progress photos, AI-powered workout adjustments, and weekly feature updates. The small monthly cost ensures you always get the latest features.',
     links: [],
   },
   {
     question: 'I want to cancel my subscription',
     answer:
-      'Sorry to see you go! But we understand, ongoing costs can be hard to manage. You can cancel your subscription by going to the appropriate app store, clicking your profile, and then clicking "Manage Subscriptions".',
+      'We\'d hate to see you go, but we understand! Cancel anytime through your app store: Profile → Manage Subscriptions. No hassle, no questions asked. Your data stays safe for 30 days in case you want to return.',
     links: [],
   },
   {
     question: 'I want a refund',
     answer:
-      'Sorry that you where not satisfied with our service. First make sure to cancel your subscription. Then you will need to file request with apple or google. We do not have access to your payment information, and cannot issue refunds directly.',
+      'We want you to love OmegaFyt! If you\'re not satisfied, first try reaching out to sam@omegafyt.com - we often can resolve issues quickly. For refunds, contact Apple or Google support as they handle all billing. Cancel your subscription first to avoid future charges.',
     links: [
       'https://support.apple.com/en-us/HT204084',
       'https://support.google.com/googleplay/workflow/9813244?hl=en',

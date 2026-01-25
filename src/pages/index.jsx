@@ -10,10 +10,10 @@ export default function Home() {
     return (
     <>
       <Head>
-        <title>WorkoutTrack - Workout and Count Calories</title>
+        <title>OmegaFyt - Achieve Your Dream Body | Smart Fitness Tracking</title>
         <meta
           name="description"
-          content="Are you looking to get in shape, lose weight, and improve your overall health and well-being? Look no further than WorkoutTrack, the ultimate workout and calorie tracking app"
+          content="Transform your fitness journey with OmegaFyt. AI-powered workouts that adapt to your progress + effortless meal tracking. Start free today and reach your goals faster than ever."
         />
       </Head>
       <Header />

@@ -8,10 +8,10 @@ export default function ContactPage() {
     return (
         <>
             <Head>
-                <title>WorkoutTrack - Contact</title>
+                <title>OmegaFyt - Contact Us | Get Support & Share Feedback</title>
                 <meta
                     name="description"
-                    content="Are you looking to get in shape, lose weight, and improve your overall health and well-being? Look no further than WorkoutTrack, the ultimate workout and calorie tracking app"
+                    content="Need help with OmegaFyt? Contact our support team for quick assistance with your fitness journey. We respond within 24 hours and love hearing your feedback!"
                 />
             </Head>
             <Header />

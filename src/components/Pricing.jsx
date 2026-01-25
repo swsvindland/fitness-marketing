@@ -6,46 +6,29 @@ import {Button} from "@/components/Button";
 
 const plans = [
   {
-    name: 'Web',
-    featured: false,
-    price: { Monthly: '$0', Annually: '$0' },
-    description:
-        "You're just getting started. Track your workouts and count calories for free.",
-    features: [
-      'Calorie and Macro Tracking',
-      'Supplement Tracking',
-      'Record weight, body measurements, and blood pressure',
-    ],
-  },
-  {
-    name: 'Web and Mobile app',
+    name: 'Default',
     featured: false,
     price: { Monthly: '$2.99', Annually: '$29.99' },
     description:
-        'You’ve been working out for a while. Get access to the mobile app and more workouts and features.',
+        'Most Popular! Unlock the full OmegaFyt experience with advanced features that keep you motivated and on track toward your goals.',
     features: [
-      'Calorie and Macro Tracking',
-      'Supplement Tracking',
-      'Record weight, body measurements, and blood pressure',
-      'Access to the mobile app',
-      "HealthKit integration (Coming soon)",
+      'AI-Powered Mobile App Access',
+      'Advanced Workout Analytics',
+      'Unlimited Progress Photos',
+      'Priority Customer Support',
     ],
   },
   {
-    name: 'Personal Trainer',
+    name: 'Lifetime',
     featured: false,
-    price: { Monthly: '$99.99', Annually: '$9,999.99' },
+    price: { Monthly: '$99.99', Annually: '$99.99' },
     description:
-        'Whether you are new to the gym or a seasoned veteran, you can benefit from a personal trainer. Get access to the mobile app and more workouts and features.',
+        'Best Value! Get the full app, all of its features for 1 price. Limited time offer.',
     features: [
-      'Calorie and Macro Tracking',
-      'Supplement Tracking',
-      'Record weight, body measurements, and blood pressure',
-      'Access to the mobile app',
-      "HealthKit integration (Coming soon)",
-      "Customized workouts",
-      "Customized meal plans",
-      "Weekly check-ins",
+        'AI-Powered Mobile App Access',
+        'Advanced Workout Analytics',
+        'Unlimited Progress Photos',
+        'Priority Customer Support',
     ],
     // link: '/contact',
   },
@@ -188,8 +171,11 @@ export function Pricing() {
                 id="pricing-title"
                 className="text-3xl font-medium tracking-tight text-background"
             >
-              Pricing Plans
+              Choose Your Transformation Plan
             </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Start your transformation today. Begin free, upgrade anytime as your needs grow.
+            </p>
           </div>
           <div className="mt-8 flex justify-center">
             <div className="relative">
@@ -237,7 +223,7 @@ export function Pricing() {
             </div>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-3">
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-2">
             {plans.map((plan) => (
                 <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
             ))}
