@@ -59,7 +59,7 @@ export function Header() {
               </div>
               <div>
                 <Link
-                  href="https://app.omegafyt.com"
+                  href={process.env.NEXT_PUBLIC_APP_URL}
                   className="btn-primary"
                 >
                   Sign In
@@ -113,7 +113,7 @@ export function Header() {
                             <MobileNavLink href="#pricing">
                               Pricing
                             </MobileNavLink>
-                            <MobileNavLink href="https://app.omegafyt.com">
+                            <MobileNavLink href={process.env.NEXT_PUBLIC_APP_URL}>
                               Sign In
                             </MobileNavLink>
                           </div>

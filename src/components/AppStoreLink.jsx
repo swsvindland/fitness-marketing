@@ -1,13 +1,16 @@
 import clsx from 'clsx';
 import va from "@vercel/analytics";
 
+
 export function AppStoreLink({ color = 'black' }) {
-  return (
+    const link = process.env.NEXT_PUBLIC_APPLE_LINK;
+
+    return (
     <button
       onClick={() => {
           va.track('apple-app-store-link-clicked')
           window.open(
-          'https://apps.apple.com/us/app/workouttrack-calorie-counter/id6443969488',
+              link,
           '_blank'
         );
       }}

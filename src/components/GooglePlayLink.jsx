@@ -2,13 +2,15 @@ import clsx from 'clsx';
 import va from '@vercel/analytics';
 
 export function GooglePlayLink({ color = 'black' }) {
+  const link = process.env.NEXT_PUBLIC_GOOGLE_LINK;
+
   return (
     <button
       aria-label="Download on the Google Play Store"
       onClick={() => {
           va.track('google-play-link-clicked')
         window.open(
-          'https://play.google.com/store/apps/details?id=com.svindland.fitness',
+          link,
           '_blank'
         );
       }}
