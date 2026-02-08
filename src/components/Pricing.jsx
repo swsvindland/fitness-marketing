@@ -8,7 +8,7 @@ const plans = [
   {
     name: 'Default',
     featured: false,
-    price: { Monthly: '$2.99', Annually: '$29.99' },
+    price: { Monthly: '0.99', Annually: '$9.99' },
     description:
         'Most Popular! Unlock the full OmegaFyt experience with advanced features that keep you motivated and on track toward your goals.',
     features: [
@@ -21,7 +21,7 @@ const plans = [
   {
     name: 'Lifetime',
     featured: false,
-    price: { Monthly: '$99.99', Annually: '$99.99' },
+    price: { Monthly: '$24.99', Annually: '$24.99' },
     description:
         'Best Value! Get the full app, all of its features for 1 price. Limited time offer.',
     features: [
