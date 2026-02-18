@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {MouseEventHandler, useState} from 'react';
 import axios from 'axios';
 import {Button} from "@/components/Button";
 import {Field, Label} from "@/components/ui/fieldset";
@@ -8,21 +8,21 @@ import {Textarea} from "@/components/ui/textarea";
 
 const Contact = () => {
     const [email, setEmail] = useState('');
-    const [body, setBody] = useState('');
+    const [message, setMessage] = useState('');
     const [sent, setSent] = useState(false);
 
-    const handleClick: React.MouseEventHandler<HTMLButtonElement> = async (event) => {
+    const handleClick: MouseEventHandler<HTMLButtonElement> = async (event) => {
         event.preventDefault();
         setSent(true);
-        await axios.post('api/sendEmail', {
+        await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/Feedback/PostFeedback`, {
             email,
-            body,
+            message,
         });
     };
 
     if (sent) {
         return (
-            <div>
+            <div className="w-full bg-white p-4 flex justify-center items-center flex-col gap-4">
                 <h1>Thank you for your message!</h1>
                 <p>I will get back to you shortly</p>
             </div>
@@ -44,8 +44,8 @@ const Contact = () => {
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                     id="message"
-                    value={body}
-                    onChange={(event) => setBody(event.target.value)}
+                    value={message}
+                    onChange={(event) => setMessage(event.target.value)}
                 />
             </Field>
             <Button
