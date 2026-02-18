@@ -34,7 +34,7 @@ const plans = [
   },
 ];
 
-function CheckIcon(props) {
+function CheckIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
       <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
         <path
@@ -55,17 +55,25 @@ function CheckIcon(props) {
   );
 }
 
+interface PlanProps {
+  name: string
+  price: { Monthly: string; Annually: string }
+  description: string
+  features: string[]
+  featured?: boolean
+  activePeriod: 'Monthly' | 'Annually'
+  link?: string
+}
+
 function Plan({
-                name,
-                price,
-                description,
-                button,
-                features,
-                featured = false,
-                activePeriod,
-                logomarkClassName,
-    link,
-              }) {
+  name,
+  price,
+  description,
+  features,
+  featured = false,
+  activePeriod,
+  link,
+}: PlanProps) {
   return (
       <section
           className={clsx(
@@ -157,7 +165,7 @@ function Plan({
 }
 
 export function Pricing() {
-  let [activePeriod, setActivePeriod] = useState('Monthly');
+  let [activePeriod, setActivePeriod] = useState<'Monthly' | 'Annually'>('Monthly');
 
   return (
       <section

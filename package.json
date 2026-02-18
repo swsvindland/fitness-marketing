@@ -29,11 +29,15 @@
     "use-debounce": "^9.0.4"
   },
   "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "19.1.0-rc.3",
     "eslint": "^9.39.2",
     "eslint-config-next": "16.1.1",
     "eslint-plugin-react-compiler": "19.1.0-rc.2",
     "prettier": "^3.7.4",
-    "prettier-plugin-tailwindcss": "^0.7.2"
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "typescript": "^5.9.3"
   }
 }

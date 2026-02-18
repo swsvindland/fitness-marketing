@@ -15,6 +15,10 @@ import Image from 'next/image';
 
 const MotionAppScreenBody = motion(AppScreen.Body);
 
+type MotionCustom = { isForwards: boolean; changeCount: number }
+
+type MotionScreenProps = { custom?: MotionCustom; animated?: boolean }
+
 const features = [
   {
     name: 'Smart AI Workouts',
@@ -52,7 +56,7 @@ const bodyVariantBackwards = {
   transition: { duration: 0.4 },
 };
 
-const bodyVariantForwards = (custom) => ({
+const bodyVariantForwards = (custom: MotionCustom) => ({
   y: '100%',
   zIndex: maxZIndex - custom.changeCount,
   transition: { duration: 0.4 },
@@ -63,9 +67,9 @@ const bodyAnimation = {
   animate: 'animate',
   exit: 'exit',
   variants: {
-    initial: (custom) =>
+    initial: (custom: MotionCustom) =>
       custom.isForwards ? bodyVariantForwards(custom) : bodyVariantBackwards,
-    animate: (custom) => ({
+    animate: (custom: MotionCustom) => ({
       y: '0%',
       opacity: 1,
       scale: 1,
@@ -73,12 +77,12 @@ const bodyAnimation = {
       filter: 'blur(0px)',
       transition: { duration: 0.4 },
     }),
-    exit: (custom) =>
+    exit: (custom: MotionCustom) =>
       custom.isForwards ? bodyVariantBackwards : bodyVariantForwards(custom),
   },
 };
 
-function WorkoutMotionScreen({ custom, animated = false }) {
+function WorkoutMotionScreen({ custom, animated = false }: MotionScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
@@ -88,7 +92,7 @@ function WorkoutMotionScreen({ custom, animated = false }) {
   );
 }
 
-function EatMotionScreen({ custom, animated = false }) {
+function EatMotionScreen({ custom, animated = false }: MotionScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
@@ -98,7 +102,7 @@ function EatMotionScreen({ custom, animated = false }) {
   );
 }
 
-function SupplementMotionScreen({ custom, animated = false }) {
+function SupplementMotionScreen({ custom, animated = false }: MotionScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
@@ -108,7 +112,7 @@ function SupplementMotionScreen({ custom, animated = false }) {
   );
 }
 
-function BodyMotionScreen({ custom, animated = false }) {
+function BodyMotionScreen({ custom, animated = false }: MotionScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
@@ -118,8 +122,8 @@ function BodyMotionScreen({ custom, animated = false }) {
   );
 }
 
-function usePrevious(value) {
-  let ref = useRef();
+function usePrevious<T>(value: T) {
+  let ref = useRef<T | undefined>(undefined);
 
   useEffect(() => {
     ref.current = value;
@@ -131,7 +135,7 @@ function usePrevious(value) {
 function FeaturesDesktop() {
   let [changeCount, setChangeCount] = useState(0);
   let [selectedIndex, setSelectedIndex] = useState(0);
-  let prevIndex = usePrevious(selectedIndex);
+  let prevIndex = usePrevious<number>(selectedIndex);
   let isForwards = prevIndex === undefined ? true : selectedIndex > prevIndex;
 
   let onChange = useDebouncedCallback(
@@ -207,15 +211,15 @@ function FeaturesDesktop() {
 
 function FeaturesMobile() {
   let [activeIndex, setActiveIndex] = useState(0);
-  let slideContainerRef = useRef();
-  let slideRefs = useRef([]);
+  let slideContainerRef = useRef<HTMLDivElement | null>(null);
+  let slideRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     let observer = new window.IntersectionObserver(
       (entries) => {
         for (let entry of entries) {
           if (entry.isIntersecting) {
-            setActiveIndex(slideRefs.current.indexOf(entry.target));
+            setActiveIndex(slideRefs.current.indexOf(entry.target as HTMLDivElement));
             break;
           }
         }
@@ -246,7 +250,7 @@ function FeaturesMobile() {
         {features.map((feature, featureIndex) => (
           <div
             key={featureIndex}
-            ref={(ref) => (slideRefs.current[featureIndex] = ref)}
+            ref={(el) => { if (el) slideRefs.current[featureIndex] = el; }}
             className="w-full flex-none snap-center px-4 sm:px-6"
           >
             <div className="relative transform overflow-hidden rounded-2xl bg-primary-dark px-5 py-6">
@@ -278,7 +282,7 @@ function FeaturesMobile() {
             )}
             aria-label={`Go to slide ${featureIndex + 1}`}
             onClick={() => {
-              slideRefs.current[featureIndex].scrollIntoView({
+              slideRefs.current[featureIndex]?.scrollIntoView({
                 block: 'nearest',
                 inline: 'nearest',
               });

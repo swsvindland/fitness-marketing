@@ -6,7 +6,7 @@ import { Container } from '@/components/Container';
 import { Logo } from '@/components/Logo';
 import { NavLinks } from '@/components/NavLinks';
 
-function MenuIcon(props) {
+function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -19,7 +19,7 @@ function MenuIcon(props) {
   );
 }
 
-function ChevronUpIcon(props) {
+function ChevronUpIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -32,10 +32,10 @@ function ChevronUpIcon(props) {
   );
 }
 
-function MobileNavLink({ children, ...props }) {
+function MobileNavLink({ children, ...props }: { children: React.ReactNode } & React.ComponentPropsWithoutRef<typeof Link>) {
   return (
     <Popover.Button
-      as={Link}
+      as={Link as any}
       className="block text-base leading-7 tracking-tight text-gray-700"
       {...props}
     >
@@ -59,9 +59,9 @@ export function Header() {
               </div>
               <div>
                 <Link
-                  href={process.env.NEXT_PUBLIC_APP_URL}
-                  className="btn-primary"
-                >
+                href={process.env.NEXT_PUBLIC_APP_URL || '#'}
+                className="btn-primary"
+              >
                   Sign In
                 </Link>
               </div>
@@ -113,7 +113,7 @@ export function Header() {
                             <MobileNavLink href="#pricing">
                               Pricing
                             </MobileNavLink>
-                            <MobileNavLink href={process.env.NEXT_PUBLIC_APP_URL}>
+                            <MobileNavLink href={(process.env.NEXT_PUBLIC_APP_URL as string) || '#'}>
                               Sign In
                             </MobileNavLink>
                           </div>

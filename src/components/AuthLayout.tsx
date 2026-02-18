@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import { ReactNode } from 'react'
 
 import { Logo } from '@/components/Logo'
 
-function BackgroundIllustration(props) {
+function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       viewBox="0 0 1090 1090"
@@ -19,7 +20,13 @@ function BackgroundIllustration(props) {
   )
 }
 
-export function AuthLayout({ title, subtitle, children }) {
+interface AuthLayoutProps {
+  title: string
+  subtitle?: string
+  children: ReactNode
+}
+
+export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
   return (
     <main className="flex min-h-full overflow-hidden pt-16 sm:py-28">
       <div className="mx-auto flex w-full max-w-2xl flex-col px-4 sm:px-6">

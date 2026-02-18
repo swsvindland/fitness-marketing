@@ -6,10 +6,10 @@ import {Button} from "@/components/Button";
 const Contact = () => {
     const [email, setEmail] = useState('');
     const [body, setBody] = useState('');
-    const [phone, setPhone] = useState(undefined);
+    const [phone, setPhone] = useState<string | undefined>(undefined);
     const [sent, setSent] = useState(false);
 
-    const handleClick = async (event) => {
+    const handleClick: React.MouseEventHandler<HTMLButtonElement> = async (event) => {
         event.preventDefault();
         setSent(true);
         await axios.post('api/sendEmail', {

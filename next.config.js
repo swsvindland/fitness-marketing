@@ -3,10 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     scrollRestoration: true,
-  },
-  eslint: {
-    // for eslint-plugin-react-compiler
-    ignoreDuringBuilds: true,
   }
 }
 
