@@ -18,9 +18,8 @@ export default function Privacy() {
         <div className="container">
         <h2 className="text-2xl">Privacy Policy</h2>
         <p>
-          Samuel Svindland built his apps, WaterTrack; BodyTrack; PeriodTrack;
-          etc, as an Ad Supported app. This SERVICE is provided by Samuel
-          Svindland at no cost and is intended for use as is.
+          Samuel Svindland built the OmegaFyt app as a Paid app. This SERVICE is
+          provided by Samuel Svindland and is intended for use as is.
         </p>
         <p>
           This page is used to inform visitors regarding my policies with the
@@ -36,7 +35,7 @@ export default function Privacy() {
         </p>
         <p>
           The terms used in this Privacy Policy have the same meanings as in our
-          Terms and Conditions, which is accessible at WaterTrack unless
+          Terms and Conditions, which is accessible at OmegaFyt unless
           otherwise defined in this Privacy Policy.
         </p>
         <p>
@@ -45,18 +44,37 @@ export default function Privacy() {
         <p>
           For a better experience, while using our Service, I may require you to
           provide us with certain personally identifiable information, including
-          but not limited to name, email. Any calculations regarding your period
-          cycle, fertility, and ovulation are performed on your device to
-          maintain privacy and is not collected by Samuel Svindland or by any
-          third party service providers.
+          but not limited to name, email.
         </p>
         <p>
-          In order to enable cloud sync, default cycle, time zone, flow rate,
-          intimacy, and notes are uploaded to the cloud. This data is not sold
+          <strong>Health Data and Usage</strong>
+        </p>
+        <p>
+          Our Service collects and processes various types of health and fitness data
+          to provide a comprehensive tracking experience. This includes, but is not
+          limited to:
+        </p>
+        <ul>
+          <li><strong>Workout Data:</strong> Exercise logs, duration, intensity, and historical performance metrics.</li>
+          <li><strong>Fitness Metrics:</strong> Weight, body measurements, and body fat percentage.</li>
+          <li><strong>Progress Photos:</strong> Images uploaded by you to track your physical transformation.</li>
+        </ul>
+        <p>
+          This data is used solely for:
+        </p>
+        <ul>
+          <li>Calculating and displaying your fitness progress and health trends.</li>
+          <li>Providing personalized insights and reminders.</li>
+          <li>Enabling cloud sync for access across multiple devices.</li>
+          <li>Ensuring the accuracy and efficiency of the Service.</li>
+        </ul>
+        <p>
+          In order to enable cloud sync, certain fitness and health data
+          are uploaded to the cloud. This data is not sold
           or used to track individual users.
         </p>
         <p>
-          No information entered into PeriodTrack is ever sold to third parties
+          No information entered into OmegaFyt is ever sold to third parties
           or used to track individual users. All information that is stored on
           the cloud is used to create the best user experience and ensure app
           efficiency, convenience, and accuracy.
@@ -75,15 +93,6 @@ export default function Privacy() {
             app
           </p>
           <ul>
-            <li>
-              <a
-                href="https://support.google.com/admob/answer/6128543?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Google AdMob
-              </a>
-            </li>
             <li>
               <a
                 href="https://firebase.google.com/support/privacy/privacy.jsx"
@@ -153,7 +162,7 @@ export default function Privacy() {
           notify you of any changes by posting the new Privacy Policy on this
           page.
         </p>
-        <p>This policy is effective as of 2022-07-01</p>
+        <p>This policy is effective as of 2026-03-16</p>
         <p>
           <strong>Contact Us</strong>
         </p>
